@@ -77,6 +77,20 @@ public class TwoPlayerActivity extends Activity {
         hasWon = true;
     }
 
+    public void restartGame(View v) {
+        ((ImageButton)findViewById(R.id.imageButton)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton2)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton3)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton4)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton5)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton6)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton7)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton8)).setImageResource(R.drawable.empty);
+        ((ImageButton)findViewById(R.id.imageButton9)).setImageResource(R.drawable.empty);
+        findViewById(R.id.overlay).setVisibility(View.GONE);
+        matrix = new int[][]{{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
+    }
+
     public void onClick(View v) {
         if (String.valueOf(v.getTag()).equalsIgnoreCase(String.valueOf(R.drawable.circle)) ||
                 String.valueOf(v.getTag()).equalsIgnoreCase(String.valueOf(R.drawable.cross))) return;
